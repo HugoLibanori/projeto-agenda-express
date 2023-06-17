@@ -1,16 +1,49 @@
 <%- include('includes/head') %>
+<%- include('includes/nav') %>
 
-  <section class="container">
-    <h1>
-      <%= titulo %><br>
-      <%- titulo %>
-    </h1>
-    <form action="/" method="post">
-      <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-      <label>Cliente</label>
-      <input type="text" name="Cliente">
-      <button>Enviar</button>
-    </form>
-  </section>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-5">
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contatos estão abaixo</p>
+
+      <div class="row">
+        <div class="col my-3">
+          <div class="alert alert-danger">Um erro qualquer</div>
+        </div>
+      </div>
+
+      <div class="responsive-table">
+        <table class="table my-3">
+          <tr>
+            <td>Hugo</td>
+            <td>Leandro</td>
+            <td>55127764847</td>
+            <td>hugo@email.com</td>
+          </tr>
+          <tr>
+            <td>Hugo</td>
+            <td>Leandro</td>
+            <td>55127764847</td>
+            <td>hugo@email.com</td>
+          </tr>
+          <tr>
+            <td>Hugo</td>
+            <td>Leandro</td>
+            <td>55127764847</td>
+            <td>hugo@email.com</td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
 
 <%- include('includes/footer') %>
