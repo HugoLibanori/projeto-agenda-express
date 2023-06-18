@@ -23,7 +23,8 @@
     "helmet": "^7.0.0",
     "mongoose": "^7.3.0",
     "nodemon": "^2.0.22",
-    "regenerator-runtime": "^0.13.11"
+    "regenerator-runtime": "^0.13.11",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.22.5",

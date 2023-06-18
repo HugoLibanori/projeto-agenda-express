@@ -1,12 +1,16 @@
 exports.meuMiddleware = (req, resp, next) => {
-    resp.locals.umaVaraiavelLocal = 'Este é o valor da variavel local.'
+    resp.locals.errors = req.flash('errors')
+    resp.locals.success = req.flash('success')
+    
     next()
 }
 
 exports.checkCsfrError = (err, req, resp, next) => {
-    if(err && 'EBADCSRFTOKEN' === err.code) {
-        return resp.send('BAD CSRF')
+    if(err) {
+        return resp.render('404')
     }
+
+    next()
 }
 
 exports.csrfMiddleware = (req, resp, next) => {
