@@ -57,7 +57,6 @@ class Login {
         this.cleanUp();
 
         if (!validator.isEmail(this.body.email)) this.errors.push('E-mail inválido')
-        console.log('DENTRO DE VALIDA: ', this.body)
         if (this.body.password.length < 3 || this.body.password.length > 50) {
             this.errors.push('A senha precisa ter entre 3 e 50 caracteres.')
         }

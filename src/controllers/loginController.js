@@ -30,7 +30,6 @@ exports.register = async (req, resp) => {
 exports.login = async (req, resp) => {
     try {
         const login = new Login(req.body)
-        console.log('DENTRO DE CONTROLER: ', login)
         await login.login()
 
         if (login.errors.length > 0) {
