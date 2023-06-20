@@ -17,7 +17,7 @@ exports.register = async (req, resp) => {
             return
         }
         req.flash('success', 'Contato registrado com sucesso!')
-        req.session.save(() => resp.redirect(`/contato/index/${contato.contato._id}`))
+        req.session.save(() => resp.redirect(`/`))
         return
 
     } catch (e) {
@@ -47,7 +47,7 @@ exports.edit = async (req, resp) => {
             return
         }
         req.flash('success', 'Contato editado com sucesso!')
-        req.session.save(() => resp.redirect(`/contato/index/${contato.contato._id}`))
+        req.session.save(() => resp.redirect(`/`))
         return
 
     } catch (e) {
