@@ -7,10 +7,11 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-
+      <% if(contato._id) { %>
       <li class="nav-item">
         <a class="nav-link" href="/contato/index">Cadastrar contato</a>
       </li>
+      <%} else {%>
 
       <% if (!user) { %>
         <li class="nav-item">
@@ -20,6 +21,7 @@
           <li class="nav-item">
             <a class="nav-link" href="/login/logout">Sair</a>
           </li>
+        <% } %>
         <% } %>
     </ul>
   </div>
